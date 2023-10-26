@@ -1,3 +1,44 @@
 *{
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(97, 147, 130);
+}
+
+#main #box{
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#main #box .nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    background-color: rgb(55, 93, 80);
+}
+
+#main #box .nav .nav-item{
+    display: flex;
+}
+
+#main #box .nav .nav-item .number{
+    background-color: aliceblue;
 }
