@@ -11,7 +11,7 @@ function randomBubble() { // for all bubble;
         store += `<div class="bubble">${randomNum}</div>`;
     }
 
-    let Full = document.querySelector("#full").innerHTML = store;
+    document.querySelector("#full").innerHTML = store;
 }
 
 
@@ -37,10 +37,14 @@ function scoreBox() { // score update;
     document.querySelector("#scorebox").textContent = score;
 }
 
+document.querySelector("#full").addEventListener("click", (bubble) => {
+    console.log(bubble.target);
+})
+
 randomBubble(); // for all bubble;
 
 runTime(); // time run function;
 
 newHit(); // hit work function;
 
-scoreBox(); // score update;
+// scoreBox(); // score update;
