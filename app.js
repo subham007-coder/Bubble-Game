@@ -1,10 +1,12 @@
-let store = "";
+function randomBubble() {
+    let store = "";
 
+    for (let i = 1; i <= 144; i++) {
+        let randomNum = Math.floor(Math.random() * 10) + 1;
+        store += `<div class="bubble">${randomNum}</div>`;
+    }
 
-for (i = 1; i <= 189; i++) {
-    let randomNum = Math.floor(Math.random() * 10) + 1;
-    // console.log(randomNum);
-
-    store += `<div class="bubble">${randomNum}</div>`;
+    let Full = document.querySelector("#full").innerHTML = store;
 }
-let Full = document.querySelector("#full").innerHTML = store;
+
+randomBubble();
