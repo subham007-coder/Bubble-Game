@@ -4,6 +4,8 @@ let time = 61;
 
 let score = 0;
 
+let randomHit = 0;
+
 function randomBubble() { // for all bubble;
 
     for (let i = 1; i <= 144; i++) {
@@ -28,7 +30,7 @@ function runTime() { // time run function;
 }
 
 function newHit() { // hit work function;
-    let randomHit = Math.floor(Math.random() * 10) + 1;
+    randomHit = Math.floor(Math.random() * 10) + 1;
     document.querySelector("#Hit").textContent = randomHit;
 }
 
@@ -38,8 +40,17 @@ function scoreBox() { // score update;
 }
 
 document.querySelector("#full").addEventListener("click", (bubble) => {
-    console.log(bubble.target);
-})
+    let bubbleText = Number(bubble.target.textContent);
+    console.log(typeof bubbleText);
+    console.log(bubbleText);
+
+    if (bubbleText === randomHit) {
+        console.log("done");
+        scoreBox(); // score update;
+        randomBubble(); // for all bubble;
+        newHit(); // hit work function;
+    }
+});
 
 randomBubble(); // for all bubble;
 
@@ -47,4 +58,3 @@ runTime(); // time run function;
 
 newHit(); // hit work function;
 
-// scoreBox(); // score update;
