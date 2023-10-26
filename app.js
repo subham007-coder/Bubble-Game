@@ -23,7 +23,7 @@ function runTime() { // time run function;
             let timeBox = document.querySelector("#Timer").innerHTML = time;
         } else {
             clearInterval(Timer);
-            document.querySelector("#full").innerHTML = `<h1>Game Over! Try Again`;
+            document.querySelector("#full").innerHTML = `<h1>Game Over! Try Again</h1>`;
         }
     }, 1000);
 }
@@ -48,6 +48,17 @@ document.querySelector("#full").addEventListener("click", (bubble) => {
         scoreBox(); // score update;
         randomBubble(); // for all bubble;
         newHit(); // hit work function;
+    } else {
+       let err = setInterval(() => {
+            document.querySelector("#full").innerHTML = `<h4>Click On Hit Number Of Bubble!</h4>`;
+        }, 100);
+        setTimeout(() => {
+            clearInterval(err);
+            console.log("subham");
+            scoreBox(); // score update;
+            randomBubble(); // for all bubble;
+            newHit(); // hit work function;
+        },3000)
     }
 });
 
