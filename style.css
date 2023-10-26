@@ -1,16 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Gilroy";
 }
 
-html, body{
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
-#main{
+#main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +20,7 @@ html, body{
     background-color: rgb(97, 147, 130);
 }
 
-#main #box{
+#main #box {
     overflow: hidden;
     width: 80%;
     height: 80%;
@@ -27,7 +28,7 @@ html, body{
     background-color: aliceblue;
 }
 
-#main #box .nav{
+#main #box .nav {
     width: 100%;
     display: flex;
     align-items: center;
@@ -36,18 +37,18 @@ html, body{
     background-color: rgb(55, 93, 80);
 }
 
-#main #box .nav .nav-item{
+#main #box .nav .nav-item {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-#main #box .nav .nav-item h4{
+#main #box .nav .nav-item h4 {
     color: aliceblue;
 }
 
-#main #box .nav .nav-item .number{
+#main #box .nav .nav-item .number {
     color: rgb(68, 108, 85);
     background-color: aliceblue;
     padding: 5px 10px;
@@ -57,7 +58,7 @@ html, body{
     border-radius: 3px;
 }
 
-#full{
+#full {
     width: 100%;
     height: calc(100% - 50px);
     display: flex;
@@ -66,7 +67,7 @@ html, body{
     padding: 10px;
 }
 
-.bubble{
+.bubble {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -77,6 +78,7 @@ html, body{
     justify-content: center;
 }
 
-.bubble:hover{
+.bubble:hover {
+    cursor: pointer;
     background-color: rgb(55, 93, 80);
 }
