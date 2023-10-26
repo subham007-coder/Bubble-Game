@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Gilroy";
 }
 
 html, body{
@@ -37,8 +38,45 @@ html, body{
 
 #main #box .nav .nav-item{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#main #box .nav .nav-item h4{
+    color: aliceblue;
 }
 
 #main #box .nav .nav-item .number{
+    color: rgb(68, 108, 85);
     background-color: aliceblue;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#full{
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.bubble{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(89, 140, 122);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bubble:hover{
+    background-color: rgb(55, 93, 80);
 }
