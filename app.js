@@ -1,6 +1,8 @@
 let store = "";
 
-let time = 61;
+let time = 6;
+
+// let GameOverTime = 6;
 
 let score = 0;
 
@@ -20,10 +22,12 @@ function runTime() { // time run function;
     let Timer = setInterval(() => {
         if (time > 0) {
             time--;
-            let timeBox = document.querySelector("#Timer").innerHTML = time;
+            document.querySelector("#Timer").innerHTML = time;
         } else {
             clearInterval(Timer);
-            document.querySelector("#full").innerHTML = `<h1>Game Over!</h1> <button>Try Again</button>`;
+            document.querySelector("#full").innerHTML = `<h1>Game Over!</h1> <button id = "try">Try Again</button>`;
+            GameOver();
+            timeTwo();
         }
     }, 1000);
 }
@@ -40,6 +44,7 @@ function scoreBox() { // score update;
 
 document.querySelector("#full").addEventListener("click", (bubble) => {
     let bubbleText = parseInt(bubble.target.textContent);
+    console.log(bubble.target);
     console.log(typeof bubbleText);
     console.log(bubbleText);
 
@@ -49,7 +54,7 @@ document.querySelector("#full").addEventListener("click", (bubble) => {
         randomBubble(); // for all bubble;
         newHit(); // hit work function;
     } else {
-       let err = setInterval(() => {
+        let err = setInterval(() => {
             document.querySelector("#full").innerHTML = `<h4>Click On Hit Number Of Bubble!</h4>`;
         }, 100);
         setTimeout(() => {
@@ -57,7 +62,7 @@ document.querySelector("#full").addEventListener("click", (bubble) => {
             scoreBox(); // score update;
             randomBubble(); // for all bubble;
             newHit(); // hit work function;
-        },3000)
+        }, 3000)
     }
 });
 
@@ -66,3 +71,24 @@ randomBubble(); // for all bubble;
 runTime(); // time run function;
 
 newHit(); // hit work function;
+
+function GameOver() {
+    
+    let Try = document.querySelector("#try").addEventListener("click", () => {
+        console.log("click");
+        time = 6;
+        setInterval(() => {
+            if (time > 0) {
+                time--;
+                document.querySelector("#Timer").innerHTML = time;
+            }
+        }, 1000);
+        score = 0;
+        document.querySelector("#scorebox").textContent = score;
+    })
+}
+    function timeTwo(){
+        if (time == 0) {
+            document.querySelector("#full").innerHTML = `<h1>Game Over!</h1> <button id = "try">Try Again</button>`;
+        }
+    }
