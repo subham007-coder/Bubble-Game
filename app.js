@@ -1,10 +1,12 @@
 let store = "";
 
-let time = 61;
+let time = 6;
 
 let score = 0;
 
 let randomHit = 0;
+
+const Try = 
 
 function randomBubble() { // for all bubble;
 
@@ -23,7 +25,7 @@ function runTime() { // time run function;
             let timeBox = document.querySelector("#Timer").innerHTML = time;
         } else {
             clearInterval(Timer);
-            document.querySelector("#full").innerHTML = `<h1>Game Over! Try Again</h1>`;
+            document.querySelector("#full").innerHTML = `<h1>Game Over!</h1>`;
         }
     }, 1000);
 }
@@ -66,4 +68,3 @@ randomBubble(); // for all bubble;
 runTime(); // time run function;
 
 newHit(); // hit work function;
-

@@ -84,3 +84,7 @@ body {
     cursor: pointer;
     background-color: rgb(55, 93, 80);
 }
+
+.try {
+    display: none;
+}
