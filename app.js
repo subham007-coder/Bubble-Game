@@ -54,7 +54,6 @@ document.querySelector("#full").addEventListener("click", (bubble) => {
         }, 100);
         setTimeout(() => {
             clearInterval(err);
-            console.log("subham");
             scoreBox(); // score update;
             randomBubble(); // for all bubble;
             newHit(); // hit work function;
