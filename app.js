@@ -27,7 +27,6 @@ function runTime() { // time run function;
             clearInterval(Timer);
             document.querySelector("#full").innerHTML = `<h1>Game Over!</h1> <button id = "try">Try Again</button>`;
             GameOver();
-            timeTwo();
         }
     }, 1000);
 }
@@ -73,7 +72,7 @@ runTime(); // time run function;
 newHit(); // hit work function;
 
 function GameOver() {
-    
+
     let Try = document.querySelector("#try").addEventListener("click", () => {
         console.log("click");
         time = 6;
@@ -82,13 +81,8 @@ function GameOver() {
                 time--;
                 document.querySelector("#Timer").innerHTML = time;
             }
-        }, 1000);
-        score = 0;
-        document.querySelector("#scorebox").textContent = score;
+            score = 0;
+            document.querySelector("#scorebox").textContent = score;
+        }, 1000)
     })
 }
-    function timeTwo(){
-        if (time == 0) {
-            document.querySelector("#full").innerHTML = `<h1>Game Over!</h1> <button id = "try">Try Again</button>`;
-        }
-    }
