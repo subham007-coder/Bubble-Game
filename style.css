@@ -85,15 +85,16 @@ body {
     background-color: rgb(55, 93, 80);
 }
 
-.try-again-btn{
+.try-again-btn {
     display: none;
-    justify-content: center; 
+    justify-content: center;
     position: relative;
     align-items: center;
     top: 55%;
     right: 0;
 }
-#try{
+
+#try {
     padding: 5px;
     border-radius: 5px;
     border: 1px;
