@@ -1,6 +1,6 @@
 let store = "";
 
-let time = 6;
+let time = 61;
 
 let score = 0;
 
@@ -74,7 +74,7 @@ runTime(); // time run function;
 newHit(); // hit work function;
 
 function GameOver() {
-    document.querySelector("#full").innerHTML = `<h1>Game Over!</h1>`;
+    document.querySelector("#full").innerHTML = `<h1>Game Over! Try Again</h1>`;
     // tryFun();
 }
 
@@ -82,7 +82,7 @@ function tryFun() {
     let tryBtn = document.querySelector(".try-again-btn");
     tryBtn.style.display = "flex";
     tryBtn.addEventListener("click", () => {
-        time = 6;
+        time = 61;
         tryBtn.style.display = "none";
         randomBubble(); // for all bubble;
         newHit(); // hit work function;
