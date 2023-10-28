@@ -25,7 +25,7 @@ function runTime() { // time run function;
             document.querySelector("#Timer").innerHTML = time;
         } else {
             clearInterval(Timer);
-            document.querySelector("#full").innerHTML = `<h1>Game Over!</h1> <button id = "try">Try Again</button>`;
+            document.querySelector("#full").innerHTML = `<h1>Game Over!</h1>`;
             GameOver();
         }
     }, 1000);
