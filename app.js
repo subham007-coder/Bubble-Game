@@ -25,7 +25,7 @@ function runTime() { // time run function;
             document.querySelector("#Timer").innerHTML = time;
         } else {
             clearInterval(Timer);
-            document.querySelector("#full").innerHTML = `<h1>Game Over!</h1>`;
+
             GameOver();
         }
     }, 1000);
@@ -72,9 +72,15 @@ runTime(); // time run function;
 newHit(); // hit work function;
 
 function GameOver() {
+    document.querySelector("#full").innerHTML = `<h1>Game Over!</h1>`;
+    tryFun()
+}
 
-    let Try = document.querySelector("#try").addEventListener("click", () => {
-        console.log("click");
+function tryFun() {
+    let tryBtn = document.querySelector(".try-again-btn");
+    tryBtn.style.display = "flex";
+    tryBtn.addEventListener("click", () => {
+        // console.log("click");
         time = 6;
         setInterval(() => {
             if (time > 0) {
@@ -86,3 +92,17 @@ function GameOver() {
         }, 1000)
     })
 }
+
+
+// let Try = document.querySelector("#try").addEventListener("click", () => {
+//     console.log("click");
+//     time = 6;
+//     setInterval(() => {
+//         if (time > 0) {
+//             time--;
+//             document.querySelector("#Timer").innerHTML = time;
+//         }
+//         score = 0;
+//         document.querySelector("#scorebox").textContent = score;
+//     }, 1000)
+// })
