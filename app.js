@@ -11,10 +11,10 @@ function randomBubble() { // for all bubble;
     for (let i = 1; i <= 270; i++) {
         let randomNum = Math.floor(Math.random() * 10) + 1;
         store += `<div class="bubble">${randomNum}</div>`;
-    }
+    };
 
     document.querySelector("#full").innerHTML = store;
-}
+};
 
 function runTime() { // time run function;
     let Timer = setInterval(() => {
@@ -28,20 +28,20 @@ function runTime() { // time run function;
         }
         else {
             clearInterval(Timer);
-        }
+        };
     }, 1000);
-}
+};
 
 function newHit() { // hit work function;
     randomHit = Math.floor(Math.random() * 10) + 1;
     document.querySelector("#Hit").textContent = randomHit;
-}
+};
 
 function scoreBox() { // score update;
     score += 10;
     document.querySelector("#scorebox").textContent = score;
 
-}
+};
 
 document.querySelector("#full").addEventListener("click", (bubble) => {
     let bubbleText = parseInt(bubble.target.textContent);
@@ -63,8 +63,8 @@ document.querySelector("#full").addEventListener("click", (bubble) => {
             scoreBox(); // score update;
             randomBubble(); // for all bubble;
             newHit(); // hit work function;
-        }, 3000)
-    }
+        }, 3000);
+    };
 });
 
 randomBubble(); // for all bubble;
@@ -76,7 +76,7 @@ newHit(); // hit work function;
 function GameOver() {
     document.querySelector("#full").innerHTML = `<h1>Game Over! Try Again</h1>`;
     // tryFun();
-}
+};
 
 function tryFun() {
     let tryBtn = document.querySelector(".try-again-btn");
@@ -88,5 +88,5 @@ function tryFun() {
         newHit(); // hit work function;
         score = 0;
         document.querySelector("#scorebox").textContent = score;
-    })
-}
+    });
+};
