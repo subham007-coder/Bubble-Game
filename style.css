@@ -87,6 +87,15 @@ body {
 
 .try-again-btn{
     display: none;
+    justify-content: center; 
+    position: relative;
     align-items: center;
-    justify-content: center;
+    top: 55%;
+    right: 0;
+}
+#try{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px;
+    background-color: #f9dfdf;
 }

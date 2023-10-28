@@ -2,8 +2,6 @@ let store = "";
 
 let time = 6;
 
-// let GameOverTime = 6;
-
 let score = 0;
 
 let randomHit = 0;
@@ -23,10 +21,13 @@ function runTime() { // time run function;
         if (time > 0) {
             time--;
             document.querySelector("#Timer").innerHTML = time;
-        } else {
-            clearInterval(Timer);
-
+        }
+        else if (time == 0) {
             GameOver();
+            tryFun();
+        }
+        else {
+            clearInterval(Timer);
         }
     }, 1000);
 }
@@ -39,6 +40,7 @@ function newHit() { // hit work function;
 function scoreBox() { // score update;
     score += 10;
     document.querySelector("#scorebox").textContent = score;
+
 }
 
 document.querySelector("#full").addEventListener("click", (bubble) => {
@@ -73,36 +75,18 @@ newHit(); // hit work function;
 
 function GameOver() {
     document.querySelector("#full").innerHTML = `<h1>Game Over!</h1>`;
-    tryFun()
+    // tryFun();
 }
 
 function tryFun() {
     let tryBtn = document.querySelector(".try-again-btn");
     tryBtn.style.display = "flex";
     tryBtn.addEventListener("click", () => {
-        // console.log("click");
         time = 6;
-        setInterval(() => {
-            if (time > 0) {
-                time--;
-                document.querySelector("#Timer").innerHTML = time;
-            }
-            score = 0;
-            document.querySelector("#scorebox").textContent = score;
-        }, 1000)
+        tryBtn.style.display = "none";
+        randomBubble(); // for all bubble;
+        newHit(); // hit work function;
+        score = 0;
+        document.querySelector("#scorebox").textContent = score;
     })
 }
-
-
-// let Try = document.querySelector("#try").addEventListener("click", () => {
-//     console.log("click");
-//     time = 6;
-//     setInterval(() => {
-//         if (time > 0) {
-//             time--;
-//             document.querySelector("#Timer").innerHTML = time;
-//         }
-//         score = 0;
-//         document.querySelector("#scorebox").textContent = score;
-//     }, 1000)
-// })
